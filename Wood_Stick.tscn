@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cpnpmgdn3qh6a"]
+
+[ext_resource type="Script" uid="uid://d31bd6ijpnu7i" path="res://scripts/stick.gd" id="1_agfe5"]
+[ext_resource type="Texture2D" uid="uid://dodjjvwvosg0d" path="res://icon.svg" id="2_cygnj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cygnj"]
+height = 148.0
+
+[node name="Stick" type="Node2D" unique_id=151995937]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1140653375]
+mass = 0.1
+can_sleep = false
+script = ExtResource("1_agfe5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1081902131]
+shape = SubResource("CapsuleShape2D_cygnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=319644654]
+scale = Vector2(0.1328125, 1)
+texture = ExtResource("2_cygnj")

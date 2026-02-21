@@ -1,6 +1,6 @@
 extends Area2D
 
-class_name Stone
+class_name Stick
 static var count = 0
 
 func _ready() -> void:
@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
-	Stone.count += 1
-	print(Stone.count)
+	Stick.count += 1
+	print(Stick.count)

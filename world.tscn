@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt37ami4xr4bs"]
+[gd_scene format=3 uid="uid://dt37ami4xr4bs"]
 
 [ext_resource type="PackedScene" uid="uid://coiks1ivlqvvg" path="res://player.tscn" id="1_f3sb7"]
 [ext_resource type="Texture2D" uid="uid://dodjjvwvosg0d" path="res://icon.svg" id="2_fj7yv"]
-[ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/stone.gd" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/collect_sticks.gd" id="2_tlwt5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
 size = Vector2(1029, 86)
@@ -10,42 +10,42 @@ size = Vector2(1029, 86)
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3sb7"]
 radius = 37.01351
 
-[node name="World" type="Node2D"]
+[node name="World" type="Node2D" unique_id=637985704]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=434204601]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=217875104]
 position = Vector2(216.5, 270)
 shape = SubResource("RectangleShape2D_fj7yv")
 
-[node name="Player" parent="." instance=ExtResource("1_f3sb7")]
+[node name="Player" parent="." unique_id=769515138 instance=ExtResource("1_f3sb7")]
 
-[node name="Stones" type="Node" parent="."]
+[node name="Stones" type="Node" parent="." unique_id=86690902]
 
-[node name="Stone" type="Area2D" parent="Stones"]
+[node name="Stick" type="Area2D" parent="Stones" unique_id=812511301]
 script = ExtResource("2_tlwt5")
 
-[node name="Icon" type="Sprite2D" parent="Stones/Stone"]
+[node name="Icon" type="Sprite2D" parent="Stones/Stick" unique_id=740311415]
 position = Vector2(298, 171.99998)
 scale = Vector2(0.5, 0.3828125)
 texture = ExtResource("2_fj7yv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stick" unique_id=1364283192]
 position = Vector2(295, 170)
 shape = SubResource("CircleShape2D_f3sb7")
 
-[node name="Stone2" type="Area2D" parent="Stones"]
+[node name="Stick2" type="Area2D" parent="Stones" unique_id=426429862]
 position = Vector2(100, 0)
 script = ExtResource("2_tlwt5")
 
-[node name="Icon" type="Sprite2D" parent="Stones/Stone2"]
+[node name="Icon" type="Sprite2D" parent="Stones/Stick2" unique_id=718118684]
 position = Vector2(298, 171.99998)
 scale = Vector2(0.5, 0.3828125)
 texture = ExtResource("2_fj7yv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stone2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stick2" unique_id=904574682]
 position = Vector2(295, 170)
 shape = SubResource("CircleShape2D_f3sb7")
 
-[connection signal="body_entered" from="Stones/Stone" to="Stones/Stone" method="_on_body_entered"]
-[connection signal="body_entered" from="Stones/Stone2" to="Stones/Stone2" method="_on_body_entered"]
+[connection signal="body_entered" from="Stones/Stick" to="Stones/Stick" method="_on_body_entered"]
+[connection signal="body_entered" from="Stones/Stick2" to="Stones/Stick2" method="_on_body_entered"]
