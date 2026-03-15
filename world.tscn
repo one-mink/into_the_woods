@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://dt37ami4xr4bs"]
 
 [ext_resource type="PackedScene" uid="uid://coiks1ivlqvvg" path="res://player.tscn" id="1_f3sb7"]
-[ext_resource type="Texture2D" uid="uid://dodjjvwvosg0d" path="res://icon.svg" id="2_fj7yv"]
 [ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/collect_sticks.gd" id="2_tlwt5"]
+[ext_resource type="Texture2D" uid="uid://combxr0m3tj31" path="res://images/stick.png" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://ij5mghvbsrci" path="res://dog_boar.tscn" id="4_aqk2v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(214, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
 size = Vector2(1029, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
+size = Vector2(127, 218)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3sb7"]
 radius = 37.01351
@@ -14,9 +21,17 @@ radius = 37.01351
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=434204601]
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=402258137]
+position = Vector2(-218, 158)
+shape = SubResource("RectangleShape2D_aqk2v")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=217875104]
 position = Vector2(216.5, 270)
 shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1959968249]
+position = Vector2(783, 118)
+shape = SubResource("RectangleShape2D_036b0")
 
 [node name="Player" parent="." unique_id=769515138 instance=ExtResource("1_f3sb7")]
 
@@ -27,8 +42,8 @@ script = ExtResource("2_tlwt5")
 
 [node name="Icon" type="Sprite2D" parent="Stones/Stick" unique_id=740311415]
 position = Vector2(298, 171.99998)
-scale = Vector2(0.5, 0.3828125)
-texture = ExtResource("2_fj7yv")
+scale = Vector2(0.198, 0.152)
+texture = ExtResource("3_tlwt5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stick" unique_id=1364283192]
 position = Vector2(295, 170)
@@ -40,12 +55,15 @@ script = ExtResource("2_tlwt5")
 
 [node name="Icon" type="Sprite2D" parent="Stones/Stick2" unique_id=718118684]
 position = Vector2(298, 171.99998)
-scale = Vector2(0.5, 0.3828125)
-texture = ExtResource("2_fj7yv")
+scale = Vector2(0.196, 0.15)
+texture = ExtResource("3_tlwt5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stones/Stick2" unique_id=904574682]
 position = Vector2(295, 170)
 shape = SubResource("CircleShape2D_f3sb7")
+
+[node name="Dog_Boar" parent="." unique_id=651422627 instance=ExtResource("4_aqk2v")]
+position = Vector2(619, 143)
 
 [connection signal="body_entered" from="Stones/Stick" to="Stones/Stick" method="_on_body_entered"]
 [connection signal="body_entered" from="Stones/Stick2" to="Stones/Stick2" method="_on_body_entered"]

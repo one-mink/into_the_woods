@@ -22,6 +22,10 @@ config/icon="res://icon.svg"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+player=""
+
 [input]
 
 throw={
