@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://p1f1311eu6p1"]
 
-[node name="StartSrceen" type="Node2D"]
+[node name="StartSrceen" type="Node2D" unique_id=1516013644]
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=681135619]
 offset_left = 4.0
 offset_top = -2.0
 offset_right = 296.0

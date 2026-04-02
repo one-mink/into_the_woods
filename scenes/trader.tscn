@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bpf2bb1t0xiqn"]
+
+[ext_resource type="Script" uid="uid://bnvi1rkmu3c7l" path="res://scripts/tarder.gd" id="1_q4ud8"]
+[ext_resource type="Texture2D" uid="uid://dodjjvwvosg0d" path="res://icon.svg" id="2_iihkc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwcii"]
+size = Vector2(240, 110)
+
+[node name="trader" type="Node2D" unique_id=463899163]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1074942237]
+script = ExtResource("1_q4ud8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1317615073]
+position = Vector2(-7, 0)
+shape = SubResource("RectangleShape2D_iwcii")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=2063173009]
+texture = ExtResource("2_iihkc")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

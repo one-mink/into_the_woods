@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cpnpmgdn3qh6a"]
+
+[ext_resource type="Script" uid="uid://d31bd6ijpnu7i" path="res://scripts/stick.gd" id="1_agfe5"]
+[ext_resource type="Texture2D" uid="uid://combxr0m3tj31" path="res://images/stick.png" id="2_cygnj"]
+[ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/collect_sticks.gd" id="3_uqfcx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4m56l"]
+radius = 51.009804
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cygnj"]
+height = 78.0
+
+[node name="Stick" type="Node2D" unique_id=151995937 groups=["stick"]]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=659123671]
+script = ExtResource("3_uqfcx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1898468026]
+shape = SubResource("CircleShape2D_4m56l")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Area2D" unique_id=1140653375]
+mass = 0.1
+can_sleep = false
+script = ExtResource("1_agfe5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/RigidBody2D" unique_id=1081902131]
+shape = SubResource("CapsuleShape2D_cygnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/RigidBody2D" unique_id=319644654]
+position = Vector2(6, 7.999999)
+rotation = 0.7853982
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_cygnj")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D/RigidBody2D" to="Area2D/RigidBody2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D/RigidBody2D" to="Area2D/RigidBody2D" method="_on_body_exited"]

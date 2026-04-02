@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 func flip_direction():
 	direction *= -1
-	#$AnimatedSprite2D.flip_h = (direction == -1)
+	$AnimatedSprite2D.flip_h = (direction == -1)
 	
 
 	
