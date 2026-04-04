@@ -4,9 +4,10 @@ class_name Player
 static var p_direction = 0
 var wood_stick = preload("res://scenes/Wood_Stick.tscn")
 @export var POWER = 400.0
+static var hearts = 5
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -700.0
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -27,6 +28,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	if hearts <= 0:
+		get_tree().change_scene_to_file("res://scenes/gameover.tscn")
 	move_and_slide()
 	
 func throw():

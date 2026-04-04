@@ -1,22 +1,19 @@
 [gd_scene format=3 uid="uid://dt37ami4xr4bs"]
 
-[ext_resource type="Texture2D" uid="uid://b076b5jjxp4sd" path="res://images/platform1.png" id="1_4mrxx"]
+[ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="1_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://coiks1ivlqvvg" path="res://scenes/player.tscn" id="1_f3sb7"]
 [ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/collect_sticks.gd" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://dih6bn5c3kici" path="res://scenes/plattform.tscn" id="3_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://combxr0m3tj31" path="res://images/stick.png" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://ij5mghvbsrci" path="res://scenes/dog_boar.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bpf2bb1t0xiqn" path="res://scenes/trader.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://tfcpru2pwc62" path="res://scenes/rocket.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://bk0djg3bekva0" path="res://scenes/mushroom.tscn" id="7_pkg7o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
-size = Vector2(223, 42)
+[sub_resource type="Environment" id="Environment_4mrxx"]
+background_energy_multiplier = 0.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
-size = Vector2(438, 60)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
-size = Vector2(369, 63)
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_7r4gi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3sb7"]
 radius = 37.01351
@@ -26,32 +23,29 @@ radius = 37.01351
 
 [node name="World" type="Node2D" unique_id=637985704]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=122386308]
+position = Vector2(381, -249)
+texture = ExtResource("1_7r4gi")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=518427865]
+position = Vector2(3728, -252)
+texture = ExtResource("1_7r4gi")
+
+[node name="Background3" type="Sprite2D" parent="." unique_id=1974697868]
+position = Vector2(7218, -252)
+texture = ExtResource("1_7r4gi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=674028547]
+environment = SubResource("Environment_4mrxx")
+camera_attributes = SubResource("CameraAttributesPractical_7r4gi")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="WorldEnvironment" unique_id=1519798678]
+
 [node name="Player" parent="." unique_id=769515138 instance=ExtResource("1_f3sb7")]
-position = Vector2(585, 129)
+position = Vector2(5089, 3)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=434204601]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=402258137]
-position = Vector2(-266, 192)
-shape = SubResource("RectangleShape2D_aqk2v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=217875104]
-position = Vector2(104, 283)
-shape = SubResource("RectangleShape2D_fj7yv")
-
-[node name="Platform1" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=1987490088]
-position = Vector2(1.9073486e-06, 13.000015)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("1_4mrxx")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1959968249]
-position = Vector2(707.5, 254.5)
-shape = SubResource("RectangleShape2D_036b0")
-
-[node name="Platform1" type="Sprite2D" parent="StaticBody2D" unique_id=633775937]
-position = Vector2(-263.00003, 194)
-scale = Vector2(0.1925781, 0.23749997)
-texture = ExtResource("1_4mrxx")
+[node name="plattform" parent="." unique_id=2102032398 instance=ExtResource("3_7r4gi")]
+position = Vector2(-38, 10)
 
 [node name="Sticks" type="Node" parent="." unique_id=86690902]
 
@@ -81,18 +75,21 @@ position = Vector2(630, 186)
 shape = SubResource("CircleShape2D_f3sb7")
 
 [node name="Dog_Boar" parent="." unique_id=651422627 instance=ExtResource("4_aqk2v")]
-position = Vector2(-13, 174)
+position = Vector2(4287, 271)
 
-[node name="Flowers" type="Node2D" parent="." unique_id=252786155]
+[node name="Dog_Boar2" parent="." unique_id=750308589 instance=ExtResource("4_aqk2v")]
+position = Vector2(6551, -380)
 
-[node name="flower" parent="Flowers" unique_id=1966157939 instance=ExtResource("7_pkg7o")]
-position = Vector2(-234, 128)
+[node name="Mushrooms" type="Node2D" parent="." unique_id=252786155]
+
+[node name="mushroom" parent="Mushrooms" unique_id=1966157939 instance=ExtResource("7_pkg7o")]
+position = Vector2(521, 193)
 
 [node name="trader" parent="." unique_id=463899163 instance=ExtResource("6_dwbse")]
-position = Vector2(829, 61)
+position = Vector2(7291, -569)
 
 [node name="rocket" parent="." unique_id=1523496801 instance=ExtResource("7_i7141")]
-position = Vector2(-455, -88)
+position = Vector2(93, 192)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=394400421]
 
@@ -115,11 +112,6 @@ offset_left = 1064.0
 offset_top = 14.0
 offset_right = 1133.0
 offset_bottom = 87.0
-
-[node name="Platform1" type="Sprite2D" parent="." unique_id=1112332488]
-position = Vector2(704, 260)
-scale = Vector2(0.30468756, 0.38007814)
-texture = ExtResource("1_4mrxx")
 
 [connection signal="body_entered" from="Sticks/Stick" to="Sticks/Stick" method="_on_body_entered"]
 [connection signal="body_entered" from="Sticks/Stick2" to="Sticks/Stick2" method="_on_body_entered"]
