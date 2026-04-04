@@ -19,7 +19,7 @@ animations = [{
 size = Vector2(167, 118)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qiu0"]
-size = Vector2(236, 12)
+size = Vector2(240, 79)
 
 [node name="Dog_Boar" type="Node2D" unique_id=651422627]
 visibility_layer = 3
@@ -42,5 +42,7 @@ shape = SubResource("RectangleShape2D_ull8f")
 script = ExtResource("3_7qiu0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1409293311]
-position = Vector2(11, 1)
+position = Vector2(9, 14.5)
 shape = SubResource("RectangleShape2D_7qiu0")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

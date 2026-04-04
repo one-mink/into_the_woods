@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bpf2bb1t0xiqn" path="res://scenes/trader.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://tfcpru2pwc62" path="res://scenes/rocket.tscn" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://bk0djg3bekva0" path="res://scenes/mushroom.tscn" id="7_pkg7o"]
+[ext_resource type="Script" uid="uid://ladpx3vcfggb" path="res://scripts/area_2d.gd" id="10_w7kh3"]
 
 [sub_resource type="Environment" id="Environment_4mrxx"]
 background_energy_multiplier = 0.0
@@ -21,6 +22,9 @@ radius = 37.01351
 [sub_resource type="Theme" id="Theme_i7141"]
 /fonts/text = null
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7kh3"]
+size = Vector2(9451, 45)
+
 [node name="World" type="Node2D" unique_id=637985704]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=122386308]
@@ -32,6 +36,18 @@ position = Vector2(3728, -252)
 texture = ExtResource("1_7r4gi")
 
 [node name="Background3" type="Sprite2D" parent="." unique_id=1974697868]
+position = Vector2(7218, -252)
+texture = ExtResource("1_7r4gi")
+
+[node name="Background3" type="Sprite2D" parent="Background3" unique_id=1345740593]
+position = Vector2(7218, -252)
+texture = ExtResource("1_7r4gi")
+
+[node name="Background4" type="Sprite2D" parent="." unique_id=758433615]
+position = Vector2(10685, -252)
+texture = ExtResource("1_7r4gi")
+
+[node name="Background3" type="Sprite2D" parent="Background4" unique_id=1105446826]
 position = Vector2(7218, -252)
 texture = ExtResource("1_7r4gi")
 
@@ -48,18 +64,6 @@ position = Vector2(5089, 3)
 position = Vector2(-38, 10)
 
 [node name="Sticks" type="Node" parent="." unique_id=86690902]
-
-[node name="Stick" type="Area2D" parent="Sticks" unique_id=812511301]
-script = ExtResource("2_tlwt5")
-
-[node name="Icon" type="Sprite2D" parent="Sticks/Stick" unique_id=740311415]
-position = Vector2(216, 207)
-scale = Vector2(0.198, 0.152)
-texture = ExtResource("3_tlwt5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sticks/Stick" unique_id=1364283192]
-position = Vector2(208, 207)
-shape = SubResource("CircleShape2D_f3sb7")
 
 [node name="Stick2" type="Area2D" parent="Sticks" unique_id=426429862]
 position = Vector2(100, 0)
@@ -86,10 +90,10 @@ position = Vector2(6551, -380)
 position = Vector2(521, 193)
 
 [node name="trader" parent="." unique_id=463899163 instance=ExtResource("6_dwbse")]
-position = Vector2(7291, -569)
+position = Vector2(7297, -557)
 
 [node name="rocket" parent="." unique_id=1523496801 instance=ExtResource("7_i7141")]
-position = Vector2(93, 192)
+position = Vector2(105, 189)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=394400421]
 
@@ -113,5 +117,12 @@ offset_top = 14.0
 offset_right = 1133.0
 offset_bottom = 87.0
 
-[connection signal="body_entered" from="Sticks/Stick" to="Sticks/Stick" method="_on_body_entered"]
+[node name="Area2D" type="Area2D" parent="." unique_id=1201445316]
+script = ExtResource("10_w7kh3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=680913582]
+position = Vector2(3506, 738)
+shape = SubResource("RectangleShape2D_w7kh3")
+
 [connection signal="body_entered" from="Sticks/Stick2" to="Sticks/Stick2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
