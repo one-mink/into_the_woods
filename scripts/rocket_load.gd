@@ -22,7 +22,7 @@ func _on_body_entered(body: Node2D) -> void:
 	Fuel.fuel = 0
 	print(fuel_tank)
 	
-	if fuel_tank == 70:
+	if fuel_tank == 50:
 		$RocketCam.make_current()
 		started = true
 	

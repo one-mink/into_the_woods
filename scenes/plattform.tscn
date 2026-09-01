@@ -113,7 +113,7 @@ shape = SubResource("CircleShape2D_dw2tl")
 [node name="deco" type="Node" parent="." unique_id=1091576209]
 
 [node name="Flower" type="Sprite2D" parent="deco" unique_id=980869419]
-position = Vector2(1418.0001, -213.00002)
+position = Vector2(1428, -159.00002)
 scale = Vector2(0.171875, 0.178125)
 texture = ExtResource("1_5sh58")
 
@@ -138,7 +138,7 @@ scale = Vector2(0.171875, 0.178125)
 texture = ExtResource("1_5sh58")
 
 [node name="Flower6" type="Sprite2D" parent="deco" unique_id=1503155858]
-position = Vector2(3304, -403)
+position = Vector2(3377, -323)
 scale = Vector2(0.171875, 0.178125)
 texture = ExtResource("1_5sh58")
 
@@ -155,19 +155,19 @@ texture = ExtResource("1_5sh58")
 [node name="Mushrooms" type="Node2D" parent="." unique_id=911248575]
 
 [node name="mushroom" parent="Mushrooms" unique_id=1966157939 instance=ExtResource("2_t63f6")]
-position = Vector2(1323, -594)
+position = Vector2(1486, -512)
 
 [node name="mushroom6" parent="Mushrooms" unique_id=1800596904 instance=ExtResource("2_t63f6")]
-position = Vector2(3415, -402)
+position = Vector2(3554, -327)
 
 [node name="mushroom8" parent="Mushrooms" unique_id=390756248 instance=ExtResource("2_t63f6")]
-position = Vector2(5368, -171)
+position = Vector2(5403, -124)
 
 [node name="mushroom9" parent="Mushrooms" unique_id=632067026 instance=ExtResource("2_t63f6")]
 position = Vector2(5917, -538)
 
 [node name="mushroom2" parent="Mushrooms" unique_id=943096363 instance=ExtResource("2_t63f6")]
-position = Vector2(2022, -414)
+position = Vector2(1040, -272)
 scale = Vector2(-1, 1)
 
 [node name="mushroom4" parent="Mushrooms" unique_id=1839861853 instance=ExtResource("2_t63f6")]
@@ -253,11 +253,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(1207, -262)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1110549903]
-position = Vector2(709.99994, 254.5)
+position = Vector2(817.99994, 306)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D4" unique_id=477358664]
-position = Vector2(704, 260)
+position = Vector2(812, 312)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -265,11 +265,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(671, -402)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1746189295]
-position = Vector2(709.99994, 254.5)
+position = Vector2(759.99994, 304)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D5" unique_id=1185976479]
-position = Vector2(704, 260)
+position = Vector2(756, 317)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -277,11 +277,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(1201, -589)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=308675116]
-position = Vector2(709.99994, 254.5)
+position = Vector2(-300.00006, 375)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D6" unique_id=1338644259]
-position = Vector2(704, 260)
+position = Vector2(-301, 385)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -289,11 +289,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(707, -775)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=2110632888]
-position = Vector2(709.99994, 254.5)
+position = Vector2(718.99994, 324)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D7" unique_id=214410752]
-position = Vector2(704, 260)
+position = Vector2(719, 329)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -301,11 +301,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(1667, -730)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=698433770]
-position = Vector2(709.99994, 254.5)
+position = Vector2(464.99994, 320)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D8" unique_id=2136884428]
-position = Vector2(704, 260)
+position = Vector2(459, 320)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -325,11 +325,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(2385, -346)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=449015937]
-position = Vector2(709.99994, 254.5)
+position = Vector2(622.99994, 476)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D10" unique_id=998674321]
-position = Vector2(704, 260)
+position = Vector2(624, 486)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -337,11 +337,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(2663, -579)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=74968463]
-position = Vector2(709.99994, 254.5)
+position = Vector2(809.99994, 327)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D11" unique_id=2102451533]
-position = Vector2(704, 260)
+position = Vector2(806, 332)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -385,11 +385,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(3244, -393)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15" unique_id=1075825908]
-position = Vector2(709.99994, 254.5)
+position = Vector2(713, 286)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D15" unique_id=1088350177]
-position = Vector2(704, 260)
+position = Vector2(710, 295)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 
@@ -505,11 +505,11 @@ texture = ExtResource("1_t2tlx")
 position = Vector2(4792, -352)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D24" unique_id=97618647]
-position = Vector2(709.99994, 254.5)
+position = Vector2(715.99994, 298)
 shape = SubResource("RectangleShape2D_twxn0")
 
 [node name="Platform1" type="Sprite2D" parent="StaticBody2D24" unique_id=1717338843]
-position = Vector2(704, 260)
+position = Vector2(707, 304)
 scale = Vector2(0.30468756, 0.38007814)
 texture = ExtResource("1_t2tlx")
 

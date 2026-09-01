@@ -14,10 +14,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="into_the_woods"
-run/main_scene="uid://dt37ami4xr4bs"
+config/name="into-the-woods"
+run/main_scene="uid://p1f1311eu6p1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://b78tbrn3k0b1o"
 
 [editor_plugins]
 

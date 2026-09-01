@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://p1f1311eu6p1"]
 
+[ext_resource type="Script" uid="uid://bglyf7tt1hutk" path="res://scenes/start_srceen.gd" id="1_2na0q"]
+[ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="2_f34nf"]
+
 [node name="StartSrceen" type="Node2D" unique_id=1516013644]
+script = ExtResource("1_2na0q")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2064800712]
+position = Vector2(523, 354)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("2_f34nf")
 
 [node name="Button" type="Button" parent="." unique_id=681135619]
-offset_left = 4.0
-offset_top = -2.0
-offset_right = 296.0
-offset_bottom = 145.0
+offset_left = 500.0
+offset_top = 250.0
+offset_right = 556.0
+offset_bottom = 281.0
+scale = Vector2(3, 3)
 text = "START"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
