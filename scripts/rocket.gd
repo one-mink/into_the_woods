@@ -2,8 +2,9 @@ extends Area2D
 
 class_name Fuel
 static var fuel = 0
+static var fuel_tank = 0
+
 var speed: float = 400.00
-var fuel_tank = 0
 var started = false
 
 @onready var fuel_bar = $/root/World/CanvasLayer/UI/ProgressBar
@@ -17,12 +18,15 @@ func _process(delta: float) -> void:
 		position += Vector2.UP * speed * delta
 	
 	
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(body: CharacterBody2D) -> void:
 	fuel_tank += Fuel.fuel
 	Fuel.fuel = 0
-	print(fuel_tank)
+	print("[DEBUG] Fuel in Tank: ", fuel_tank)
+	print("[DEBUG] Fuel in Player: ", Fuel.fuel)
 	
-	if fuel_tank == 50:
+	# add better ending here
+	
+	if fuel_tank >= 50:
 		$RocketCam.make_current()
 		started = true
 	

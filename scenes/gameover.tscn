@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://bibpowkeib56j"]
+[gd_scene load_steps=3 format=3 uid="uid://bibpowkeib56j"]
 
-[ext_resource type="Script" uid="uid://blbsbpja0t0tg" path="res://scenes/gameover.gd" id="1_dy3ie"]
+[ext_resource type="Script" uid="uid://blbsbpja0t0tg" path="res://scripts/gameover.gd" id="1_dy3ie"]
 [ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="1_ncp31"]
 
-[node name="Node2D" type="Node2D" unique_id=518568778]
+[node name="Node2D" type="Node2D"]
 script = ExtResource("1_dy3ie")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=692197505]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(565.99994, 342.99994)
 scale = Vector2(0.36, 0.36)
 texture = ExtResource("1_ncp31")
 
-[node name="Label" type="Label" parent="Background" unique_id=674933719]
+[node name="Label" type="Label" parent="Background"]
 offset_left = -500.0
 offset_top = -250.0
 offset_right = -408.0
@@ -19,7 +19,7 @@ offset_bottom = -227.0
 scale = Vector2(10, 10)
 text = "GAME OVER"
 
-[node name="Button" type="Button" parent="." unique_id=1859603308]
+[node name="Button" type="Button" parent="."]
 offset_left = 486.0
 offset_top = 394.0
 offset_right = 562.0

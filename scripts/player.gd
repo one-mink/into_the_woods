@@ -4,20 +4,25 @@ class_name Player
 static var p_direction = 0
 var wood_stick = preload("res://scenes/Wood_Stick.tscn")
 @export var POWER = 400.0
-static var hearts = 5
+@export var SPEED: float = 350.0
+static var hearts = 50
 
-const SPEED = 300.0
 const JUMP_VELOCITY = -700.0
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+		
 	if Input.is_action_just_pressed("throw"):
 		throw()
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY + (Stick.count*10)
-	var direction := Input.get_axis("ui_left", "ui_right")
+		
+	var direction := Input.get_axis("left", "right")
+	
 	p_direction = direction
+	
 	if direction:
 		velocity.x = direction * SPEED
 		if direction > 0:
@@ -44,7 +49,6 @@ func throw():
 		
 		
 		Stick.count -= 1
-		print(Stick.count)
-	else:
-		pass
+		print("Sticks: ", Stick.count)
+
 		

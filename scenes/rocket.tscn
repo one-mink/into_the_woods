@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://tfcpru2pwc62"]
+[gd_scene load_steps=5 format=3 uid="uid://tfcpru2pwc62"]
 
-[ext_resource type="Script" uid="uid://cq6mb537jsm51" path="res://scripts/rocket_load.gd" id="2_agf72"]
+[ext_resource type="Script" uid="uid://cq6mb537jsm51" path="res://scripts/rocket.gd" id="2_agf72"]
 [ext_resource type="Texture2D" uid="uid://diflbr483t8p8" path="res://images/rocket.png" id="2_dkv7l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2y7n"]
@@ -10,23 +10,23 @@ height = 150.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kmw3"]
 size = Vector2(285, 195.5)
 
-[node name="rocket" type="Node2D" unique_id=1523496801]
+[node name="rocket" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=362042475]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=645012864]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CapsuleShape2D_y2y7n")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=923811727]
+[node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("2_agf72")
 
-[node name="RocketCam" type="Camera2D" parent="Area2D" unique_id=1993903649]
+[node name="RocketCam" type="Camera2D" parent="Area2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=689277649]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(18, 41.75)
 shape = SubResource("RectangleShape2D_8kmw3")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=368452976]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(25.999998, -42.999992)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_dkv7l")
