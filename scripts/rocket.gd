@@ -3,6 +3,7 @@ extends Area2D
 class_name Fuel
 static var fuel = 0
 static var fuel_tank = 0
+static var fuel_needed = 50
 
 var speed: float = 400.00
 var started = false
@@ -20,6 +21,7 @@ func _process(delta: float) -> void:
 	
 func _on_body_entered(body: CharacterBody2D) -> void:
 	fuel_tank += Fuel.fuel
+	fuel_needed -= Fuel.fuel_tank
 	Fuel.fuel = 0
 	print("[DEBUG] Fuel in Tank: ", fuel_tank)
 	print("[DEBUG] Fuel in Player: ", Fuel.fuel)

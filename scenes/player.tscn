@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://coiks1ivlqvvg"]
+[gd_scene load_steps=9 format=3 uid="uid://coiks1ivlqvvg"]
 
 [ext_resource type="Texture2D" uid="uid://b78tbrn3k0b1o" path="res://images/noff_idle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://bonklnptvprjk" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="FontFile" uid="uid://br0tfbhl2n65v" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://c5tglh6yy5oci" path="res://scripts/UI_Fuel.gd" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://bx7mrthj6l203" path="res://scripts/UI_Mushrooms.gd" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://b2ig8lquswgce" path="res://scripts/UI_lives.gd" id="6_tuyoq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
@@ -35,6 +39,37 @@ shape = SubResource("CapsuleShape2D_4flbx")
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(0.8, 0.8)
 limit_enabled = false
+
+[node name="Label" type="Label" parent="CharacterBody2D/Camera2D"]
+z_index = 2
+offset_left = -703.0
+offset_top = -390.0
+offset_right = -663.0
+offset_bottom = -366.0
+theme_override_fonts/font = ExtResource("3_dqkch")
+theme_override_font_sizes/font_size = 24
+script = ExtResource("3_qhqgy")
+
+[node name="Label2" type="Label" parent="CharacterBody2D/Camera2D"]
+z_index = 2
+offset_left = -703.0
+offset_top = -358.0
+offset_right = -541.0
+offset_bottom = -334.0
+theme_override_fonts/font = ExtResource("3_dqkch")
+theme_override_font_sizes/font_size = 24
+script = ExtResource("5_qlg0r")
+
+[node name="Label3" type="Label" parent="CharacterBody2D/Camera2D"]
+z_index = 2
+offset_left = 542.0
+offset_top = -392.0
+offset_right = 704.0
+offset_bottom = -368.0
+theme_override_fonts/font = ExtResource("3_dqkch")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 2
+script = ExtResource("6_tuyoq")
 
 [node name="Stick_Start" type="Marker2D" parent="CharacterBody2D"]
 position = Vector2(187, 0)

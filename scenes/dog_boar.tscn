@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ij5mghvbsrci"]
+[gd_scene load_steps=7 format=3 uid="uid://ij5mghvbsrci"]
 
 [ext_resource type="Script" uid="uid://cq06baa8cwds5" path="res://scripts/dog_boar_movment.gd" id="1_u50qb"]
 [ext_resource type="Texture2D" uid="uid://dooo5piujn6pn" path="res://images/dog.png" id="2_ull8f"]
@@ -21,27 +21,29 @@ size = Vector2(167, 118)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qiu0"]
 size = Vector2(240, 79)
 
-[node name="Dog_Boar" type="Node2D" unique_id=651422627]
+[node name="Dog_Boar" type="Node2D"]
 visibility_layer = 3
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=804829489 groups=["dog"]]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["dog"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_u50qb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1679652436]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(6, 15.000002)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_u50qb")
 animation = &"Idle"
 frame_progress = 0.9722214
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1062514709]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(12, 7)
 shape = SubResource("RectangleShape2D_ull8f")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2141526256 groups=["dog"]]
+[node name="Area2D" type="Area2D" parent="." groups=["dog"]]
 script = ExtResource("3_7qiu0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1409293311]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(9, 14.5)
 shape = SubResource("RectangleShape2D_7qiu0")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dt37ami4xr4bs"]
+[gd_scene load_steps=18 format=3 uid="uid://dt37ami4xr4bs"]
 
 [ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="1_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://coiks1ivlqvvg" path="res://scenes/player.tscn" id="1_f3sb7"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cf66xqbys2j00" path="res://scenes/killzone.tscn" id="9_w7kh3"]
 [ext_resource type="Script" uid="uid://cjtnnhbdhxy0w" path="res://scripts/rocket_fuel_label.gd" id="11_e3hyu"]
 [ext_resource type="FontFile" uid="uid://br0tfbhl2n65v" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="11_q5onr"]
+[ext_resource type="Texture2D" uid="uid://b05kco53qsnni" path="res://images/mushroom.png" id="13_jhx03"]
 
 [sub_resource type="Environment" id="Environment_4mrxx"]
 background_energy_multiplier = 0.0
@@ -124,5 +125,38 @@ text = "Fueltank: 100"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_e3hyu")
+
+[node name="trader_label" type="Node" parent="Labels"]
+
+[node name="trader2" type="Label" parent="Labels/trader_label"]
+z_index = 2
+offset_left = 7477.0
+offset_top = -579.24
+offset_right = 7762.0
+offset_bottom = -547.24
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_q5onr")
+theme_override_font_sizes/font_size = 32
+text = "="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="trader3" type="Label" parent="Labels/trader_label"]
+z_index = 2
+offset_left = 7618.0
+offset_top = -581.24
+offset_right = 7903.0
+offset_bottom = -549.24
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_q5onr")
+theme_override_font_sizes/font_size = 32
+text = "10 Fuel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Labels/trader_label"]
+position = Vector2(7548.0005, -580.24)
+scale = Vector2(0.218, 0.218)
+texture = ExtResource("13_jhx03")
 
 [connection signal="body_entered" from="Sticks/Stick2" to="Sticks/Stick2" method="_on_body_entered"]

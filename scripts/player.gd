@@ -4,8 +4,8 @@ class_name Player
 static var p_direction = 0
 var wood_stick = preload("res://scenes/Wood_Stick.tscn")
 @export var POWER = 400.0
-@export var SPEED: float = 350.0
-static var hearts = 50
+@export var SPEED: float = 320.0
+static var hearts = 5
 
 const JUMP_VELOCITY = -700.0
 
