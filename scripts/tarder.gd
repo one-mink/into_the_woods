@@ -8,8 +8,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if Mushroom.count > 0:
-		Mushroom.count -= 1
-		Fuel.fuel += 10
+		Fuel.fuel += 10*Mushroom.count
+		Mushroom.count -= Mushroom.count	
 		print(Fuel.fuel)
 		
 	

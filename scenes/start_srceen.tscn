@@ -7,16 +7,18 @@
 script = ExtResource("1_2na0q")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=2064800712]
-position = Vector2(523, 354)
-scale = Vector2(0.36, 0.36)
+position = Vector2(11.999939, 45.99997)
+scale = Vector2(0.46, 0.46)
 texture = ExtResource("2_f34nf")
 
 [node name="Button" type="Button" parent="." unique_id=681135619]
-offset_left = 500.0
-offset_top = 250.0
-offset_right = 556.0
-offset_bottom = 281.0
+offset_left = -85.0
+offset_top = -98.0
+offset_right = -29.0
+offset_bottom = -67.0
 scale = Vector2(3, 3)
 text = "START"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1494757676]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

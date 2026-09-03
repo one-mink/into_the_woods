@@ -6,9 +6,11 @@
 [node name="Node2D" type="Node2D" unique_id=518568778]
 script = ExtResource("1_dy3ie")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=704383212]
+
 [node name="Background" type="Sprite2D" parent="." unique_id=692197505]
-position = Vector2(565.99994, 342.99994)
-scale = Vector2(0.36, 0.36)
+position = Vector2(1.999939, 45.99997)
+scale = Vector2(0.46, 0.46)
 texture = ExtResource("1_ncp31")
 
 [node name="Label" type="Label" parent="Background" unique_id=674933719]
@@ -20,10 +22,10 @@ scale = Vector2(10, 10)
 text = "GAME OVER"
 
 [node name="Button" type="Button" parent="." unique_id=1859603308]
-offset_left = 486.0
-offset_top = 394.0
-offset_right = 562.0
-offset_bottom = 430.5
+offset_left = -78.0
+offset_top = 85.0
+offset_right = -2.0
+offset_bottom = 121.5
 scale = Vector2(2, 2)
 text = "restart"
 
