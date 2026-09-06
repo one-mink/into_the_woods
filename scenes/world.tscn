@@ -24,6 +24,12 @@ size = Vector2(9451, 45)
 
 [node name="World" type="Node2D" unique_id=637985704]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=674028547]
+environment = SubResource("Environment_4mrxx")
+camera_attributes = SubResource("CameraAttributesPractical_7r4gi")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="WorldEnvironment" unique_id=1519798678]
+
 [node name="Background" type="Sprite2D" parent="." unique_id=122386308]
 position = Vector2(381, -249)
 texture = ExtResource("1_7r4gi")
@@ -47,12 +53,6 @@ texture = ExtResource("1_7r4gi")
 [node name="Background3" type="Sprite2D" parent="Background4" unique_id=1105446826]
 position = Vector2(7218, -252)
 texture = ExtResource("1_7r4gi")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=674028547]
-environment = SubResource("Environment_4mrxx")
-camera_attributes = SubResource("CameraAttributesPractical_7r4gi")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="WorldEnvironment" unique_id=1519798678]
 
 [node name="Player" parent="." unique_id=769515138 instance=ExtResource("1_f3sb7")]
 position = Vector2(5089, 3)

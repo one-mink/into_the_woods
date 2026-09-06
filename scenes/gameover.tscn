@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bibpowkeib56j"]
 
-[ext_resource type="Script" uid="uid://blbsbpja0t0tg" path="res://scenes/gameover.gd" id="1_dy3ie"]
+[ext_resource type="Script" uid="uid://blbsbpja0t0tg" path="res://scripts/gameover.gd" id="1_dy3ie"]
 [ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="1_ncp31"]
+[ext_resource type="FontFile" uid="uid://credw2f6vml43" path="res://fonts/PatrickHand-Regular.ttf" id="3_2mkfd"]
 
 [node name="Node2D" type="Node2D" unique_id=518568778]
 script = ExtResource("1_dy3ie")
@@ -14,19 +15,21 @@ scale = Vector2(0.46, 0.46)
 texture = ExtResource("1_ncp31")
 
 [node name="Label" type="Label" parent="Background" unique_id=674933719]
-offset_left = -500.0
-offset_top = -250.0
-offset_right = -408.0
-offset_bottom = -227.0
-scale = Vector2(10, 10)
+offset_left = -558.6955
+offset_top = -282.60864
+offset_right = 545.3045
+offset_bottom = 70.39136
+theme_override_fonts/font = ExtResource("3_2mkfd")
+theme_override_font_sizes/font_size = 260
 text = "GAME OVER"
 
 [node name="Button" type="Button" parent="." unique_id=1859603308]
-offset_left = -78.0
-offset_top = 85.0
-offset_right = -2.0
-offset_bottom = 121.5
-scale = Vector2(2, 2)
+offset_left = -97.0
+offset_top = 77.0
+offset_right = 95.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("3_2mkfd")
+theme_override_font_sizes/font_size = 70
 text = "restart"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

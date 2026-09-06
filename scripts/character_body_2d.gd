@@ -6,12 +6,12 @@ var wood_stick = preload("res://scenes/Wood_Stick.tscn")
 @export var POWER = 400.0
 static var hearts = 5
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -700.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -750.0
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += get_gravity() * delta *1.2
 	if Input.is_action_just_pressed("throw"):
 		throw()
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

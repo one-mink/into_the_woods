@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b78tbrn3k0b1o" path="res://images/noff_idle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://bonklnptvprjk" path="res://scripts/character_body_2d.gd" id="1_g2els"]
+[ext_resource type="FontFile" uid="uid://credw2f6vml43" path="res://fonts/PatrickHand-Regular.ttf" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://c627wsa6wicol" path="res://scripts/fuel-label.gd" id="3_qhqgy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
@@ -9,7 +11,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_4flbx")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -38,3 +40,12 @@ position = Vector2(187, 0)
 
 [node name="Stick_Start_Flip" type="Marker2D" parent="CharacterBody2D" unique_id=431525264]
 position = Vector2(-180, 0)
+
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=882821239]
+offset_left = -549.0
+offset_top = -308.0
+offset_right = -387.0
+offset_bottom = -253.0
+theme_override_fonts/font = ExtResource("3_dqkch")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("3_qhqgy")

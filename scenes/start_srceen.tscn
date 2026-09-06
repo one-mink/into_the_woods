@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://p1f1311eu6p1"]
 
-[ext_resource type="Script" uid="uid://bglyf7tt1hutk" path="res://scenes/start_srceen.gd" id="1_2na0q"]
+[ext_resource type="Script" uid="uid://bglyf7tt1hutk" path="res://scripts/start_srceen.gd" id="1_2na0q"]
 [ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="2_f34nf"]
+[ext_resource type="FontFile" uid="uid://credw2f6vml43" path="res://fonts/PatrickHand-Regular.ttf" id="3_f34nf"]
 
 [node name="StartSrceen" type="Node2D" unique_id=1516013644]
 script = ExtResource("1_2na0q")
@@ -12,11 +13,12 @@ scale = Vector2(0.46, 0.46)
 texture = ExtResource("2_f34nf")
 
 [node name="Button" type="Button" parent="." unique_id=681135619]
-offset_left = -85.0
-offset_top = -98.0
-offset_right = -29.0
-offset_bottom = -67.0
-scale = Vector2(3, 3)
+offset_left = -122.0
+offset_top = -78.0
+offset_right = 120.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("3_f34nf")
+theme_override_font_sizes/font_size = 100
 text = "START"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1494757676]
