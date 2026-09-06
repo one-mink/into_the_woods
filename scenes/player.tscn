@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bonklnptvprjk" path="res://scripts/character_body_2d.gd" id="1_g2els"]
 [ext_resource type="FontFile" uid="uid://credw2f6vml43" path="res://fonts/PatrickHand-Regular.ttf" id="3_dqkch"]
 [ext_resource type="Script" uid="uid://c627wsa6wicol" path="res://scripts/fuel-label.gd" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://cxdcyoagfy4fp" path="res://scripts/heart-label.gd" id="5_qlg0r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
 animations = [{
@@ -49,3 +50,12 @@ offset_bottom = -253.0
 theme_override_fonts/font = ExtResource("3_dqkch")
 theme_override_font_sizes/font_size = 30
 script = ExtResource("3_qhqgy")
+
+[node name="Label2" type="Label" parent="CharacterBody2D" unique_id=454134974]
+offset_left = 419.0
+offset_top = -303.0
+offset_right = 543.0
+offset_bottom = -217.0
+theme_override_fonts/font = ExtResource("3_dqkch")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("5_qlg0r")
