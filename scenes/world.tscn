@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://bcs56pn8h01xm" path="res://images/background.png" id="1_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://coiks1ivlqvvg" path="res://scenes/player.tscn" id="1_f3sb7"]
+[ext_resource type="FontFile" uid="uid://credw2f6vml43" path="res://fonts/PatrickHand-Regular.ttf" id="1_jhx03"]
+[ext_resource type="Script" uid="uid://c627wsa6wicol" path="res://scripts/fuel-label.gd" id="2_o8fc1"]
 [ext_resource type="Script" uid="uid://btyc38l3aob6d" path="res://scripts/collect_sticks.gd" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://dih6bn5c3kici" path="res://scenes/plattform.tscn" id="3_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://combxr0m3tj31" path="res://images/stick.png" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://cxdcyoagfy4fp" path="res://scripts/heart-label.gd" id="3_xo05s"]
 [ext_resource type="PackedScene" uid="uid://ij5mghvbsrci" path="res://scenes/dog_boar.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bpf2bb1t0xiqn" path="res://scenes/trader.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://tfcpru2pwc62" path="res://scenes/rocket.tscn" id="7_i7141"]
@@ -56,6 +59,26 @@ texture = ExtResource("1_7r4gi")
 
 [node name="Player" parent="." unique_id=769515138 instance=ExtResource("1_f3sb7")]
 position = Vector2(5089, 3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=1395495486]
+
+[node name="Label" type="Label" parent="Player/CanvasLayer" unique_id=797129967]
+offset_left = 38.0
+offset_top = 23.0
+offset_right = 200.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("1_jhx03")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("2_o8fc1")
+
+[node name="Label2" type="Label" parent="Player/CanvasLayer" unique_id=1975804975]
+offset_left = 1012.0
+offset_top = 27.0
+offset_right = 1136.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("1_jhx03")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("3_xo05s")
 
 [node name="plattform" parent="." unique_id=2102032398 instance=ExtResource("3_7r4gi")]
 position = Vector2(-38, 10)

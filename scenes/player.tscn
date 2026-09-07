@@ -35,6 +35,7 @@ position = Vector2(12, 3)
 shape = SubResource("CapsuleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=64352215]
+position_smoothing_enabled = true
 
 [node name="Stick_Start" type="Marker2D" parent="CharacterBody2D" unique_id=422565892]
 position = Vector2(187, 0)
@@ -43,6 +44,7 @@ position = Vector2(187, 0)
 position = Vector2(-180, 0)
 
 [node name="Label" type="Label" parent="CharacterBody2D" unique_id=882821239]
+visible = false
 offset_left = -549.0
 offset_top = -308.0
 offset_right = -387.0
@@ -52,6 +54,7 @@ theme_override_font_sizes/font_size = 30
 script = ExtResource("3_qhqgy")
 
 [node name="Label2" type="Label" parent="CharacterBody2D" unique_id=454134974]
+visible = false
 offset_left = 419.0
 offset_top = -303.0
 offset_right = 543.0
