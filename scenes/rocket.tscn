@@ -3,22 +3,52 @@
 [ext_resource type="Script" uid="uid://cq6mb537jsm51" path="res://scripts/rocket_load.gd" id="2_agf72"]
 [ext_resource type="Texture2D" uid="uid://diflbr483t8p8" path="res://images/rocket.png" id="2_dkv7l"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y2y7n"]
-radius = 56.0
-height = 150.0
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kmw3"]
 size = Vector2(285, 195.5)
 
 [node name="rocket" type="Node2D" unique_id=1523496801]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=362042475]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=645012864]
-shape = SubResource("CapsuleShape2D_y2y7n")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=923811727]
 script = ExtResource("2_agf72")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D" unique_id=962217210]
+position = Vector2(-34, 136)
+rotation = 1.5707964
+amount = 100
+speed_scale = 2.0
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 120.0
+initial_velocity_max = 150.0
+scale_amount_max = 4.0
+color = Color(0.6392157, 0.16862746, 0.21960784, 1)
+
+[node name="rocket_particles" type="CPUParticles2D" parent="Area2D" unique_id=1413167192]
+position = Vector2(7, 116)
+rotation = -3.1415925
+amount = 300
+speed_scale = 1.5
+fixed_fps = 30
+direction = Vector2(0, -1)
+spread = 15.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 250.0
+scale_amount_max = 5.0
+color = Color(0.9553086, 0.9260674, 0, 1)
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="Area2D" unique_id=1062769394]
+position = Vector2(46, 136)
+rotation = 1.5707964
+amount = 100
+speed_scale = 2.0
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 120.0
+initial_velocity_max = 150.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+color = Color(0.63919556, 0.16808337, 0.21821207, 1)
 
 [node name="RocketCam" type="Camera2D" parent="Area2D" unique_id=1993903649]
 

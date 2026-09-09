@@ -5,14 +5,19 @@ static var fuel = 0
 var speed: float = 400.00
 static var fuel_tank = 0
 var started = false
+@onready var rocket_particles = [$rocket_particles, $CPUParticles2D, $CPUParticles2D2]
 
 
 func _ready() -> void:
-	pass 
+	pass
 
 func _process(delta: float) -> void:
+	for i in rocket_particles:
+		i.visible = false
 	
 	if started == true:
+		for a in rocket_particles:
+			a.visible = true 
 		position += Vector2.UP * speed * delta
 	
 	
