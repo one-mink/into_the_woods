@@ -20,4 +20,15 @@ position = Vector2(-6, -74)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_ru27k")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D" unique_id=63482244]
+position = Vector2(0, -60)
+amount = 80
+spread = 180.0
+gravity = Vector2(0, 1)
+initial_velocity_min = 80.0
+initial_velocity_max = 80.0
+scale_amount_min = 0.0
+scale_amount_max = 10.0
+color = Color(0.8499222, 0.84906316, 3.85046e-07, 1)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
