@@ -21,4 +21,13 @@ texture = ExtResource("2_0bdi0")
 position = Vector2(4, -3)
 shape = SubResource("CapsuleShape2D_nageh")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D" unique_id=258047298]
+amount = 80
+spread = 180.0
+gravity = Vector2(0, 10)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+scale_amount_max = 6.45
+color = Color(1, 0.26666668, 0.1764706, 1)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
