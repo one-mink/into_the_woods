@@ -9,4 +9,4 @@ Move with arrows and jump with space. Avoid the animals. If you throw a stick at
 ## Link
 https://one-mink.itch.io/into-the-woods
 
-
+![screenshot](images/screenshot.png)
